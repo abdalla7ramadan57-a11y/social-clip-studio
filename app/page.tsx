@@ -17,11 +17,12 @@ const studios = [
   {
     id: "flow",
     label: "Flow Studio",
-    eyebrow: "أنشئ داخل مشروعك",
-    title: "ابدأ من الملف المفتوح بالفعل",
-    text: "Flow Studio يتعرّف على الملف الموجود في Premiere Pro ويمنحك مساحة مباشرة لكتابة ما تريد إنشاءه وإضافة المدخلات من نفس اللوحة.",
+    eyebrow: "قريبًا",
+    title: "Flow Studio — قيد الإنشاء",
+    text: "القسم ظاهر داخل الإضافة كمعاينة أولية، لكنه ما زال قيد التطوير وغير متاح للاستخدام النهائي حاليًا.",
     image: `${basePath}/screens/flow-studio.webp`,
     accent: "violet",
+    status: "قيد الإنشاء",
   },
   {
     id: "broll",
@@ -200,7 +201,7 @@ export default function Home() {
                 className={active.id === studio.id ? `active ${studio.accent}` : ""}
                 onClick={() => setActive(studio)}
               >
-                <span>{studio.label}</span><b>↗</b>
+                <span>{studio.label}{studio.status && <small className="coming-badge">{studio.status}</small>}</span><b>↗</b>
               </button>
             ))}
           </div>
@@ -210,6 +211,7 @@ export default function Home() {
               <span className="studio-eyebrow">{active.eyebrow}</span>
               <h3>{active.title}</h3>
               <p>{active.text}</p>
+              {active.id === "flow" && <div className="construction-notice"><span>!</span> هذه الميزة ليست متاحة بعد</div>}
               {active.id === "broll" && (
                 <div className="source-list"><span>Pexels</span><span>Pixabay</span><span>Unsplash</span><span>Freesound</span></div>
               )}
@@ -245,7 +247,7 @@ export default function Home() {
             <p>Social Clip Studio كاملة للتعلّم، تنظيم الدروس والـPlaylists، وصناعة محتوى الكورسات.</p>
             <ul>
               <li>تنظيم محتوى YouTube والدروس</li>
-              <li>Social Workspace وFlow Studio</li>
+              <li>Social Workspace متاح — وFlow Studio قريبًا</li>
               <li>B‑Roll Studio داخل بيئة المونتاج</li>
               <li>واجهة عربية وإنجليزية</li>
             </ul>
