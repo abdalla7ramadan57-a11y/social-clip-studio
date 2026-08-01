@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const studios = [
   {
     id: "workspace",
@@ -9,7 +11,7 @@ const studios = [
     eyebrow: "شاهد ونظّم",
     title: "كل فيديو قدامك، وكل ملاحظة في وقتها",
     text: "عاين الفيديو داخل مساحة العمل، تحكّم في السرعة والصوت، أضف ملاحظة عند التوقيت الحالي، واحفظ العلامات المرجعية والفيديوهات الأخيرة.",
-    image: "/screens/social-workspace.webp",
+    image: `${basePath}/screens/social-workspace.webp`,
     accent: "pink",
   },
   {
@@ -18,7 +20,7 @@ const studios = [
     eyebrow: "أنشئ داخل مشروعك",
     title: "ابدأ من الملف المفتوح بالفعل",
     text: "Flow Studio يتعرّف على الملف الموجود في Premiere Pro ويمنحك مساحة مباشرة لكتابة ما تريد إنشاءه وإضافة المدخلات من نفس اللوحة.",
-    image: "/screens/flow-studio.webp",
+    image: `${basePath}/screens/flow-studio.webp`,
     accent: "violet",
   },
   {
@@ -27,7 +29,7 @@ const studios = [
     eyebrow: "ابحث واستورد",
     title: "لقطات B‑Roll بدون مغادرة المونتاج",
     text: "ابحث عن فيديو أو صور أو صوت من Pexels وPixabay وUnsplash وFreesound، ثم نزّل واستورد النتيجة إلى الـComposition النشطة.",
-    image: "/screens/b-roll-studio.webp",
+    image: `${basePath}/screens/b-roll-studio.webp`,
     accent: "yellow",
   },
 ];
@@ -82,7 +84,7 @@ export default function Home() {
               <span>Social Clip Studio</span>
               <span className="live">LIVE PANEL</span>
             </div>
-            <img src="/screens/social-clip-studio.webp" alt="واجهة Social Clip Studio داخل Premiere Pro" />
+            <img src={`${basePath}/screens/social-clip-studio.webp`} alt="واجهة Social Clip Studio داخل Premiere Pro" />
           </div>
           <div className="float-card float-top">
             <span className="float-icon yellow">↯</span>
