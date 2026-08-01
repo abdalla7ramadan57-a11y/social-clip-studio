@@ -50,6 +50,7 @@ export default function Home() {
           <span>Social Clip Studio</span>
         </a>
         <div className="nav-links">
+          <a href="#video">فيديو الشرح</a>
           <a href="#features">المزايا</a>
           <a href="#studios">الاستديوهات</a>
           <a href="#learning">التعلّم والكورسات</a>
@@ -68,7 +69,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="button primary" href={whatsappUrl} target="_blank" rel="noreferrer">اشترِ الآن بـ500ج <span>←</span></a>
-            <a className="button ghost" href="#demo">شاهد طريقة العمل</a>
+            <a className="button ghost" href="#video">شاهد فيديو الشرح</a>
           </div>
           <div className="hero-proof">
             <span><b>05</b> منصات ظاهرة</span>
@@ -109,6 +110,32 @@ export default function Home() {
               <span key={platform}><b>{String(index + 1).padStart(2, "0")}</b>{platform}</span>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="video-section shell" id="video">
+        <div className="section-head video-head">
+          <div>
+            <span className="section-number">00 / FULL DEMO</span>
+            <h2>شاهد الإضافة.<br />وهي شغّالة.</h2>
+          </div>
+          <p>شرح عملي كامل لـSocial Clip Studio داخل بيئة المونتاج، من لصق الرابط لحد تنظيم المحتوى واستخدام الاستديوهات.</p>
+        </div>
+        <div className="video-frame">
+          <div className="video-labels">
+            <span><i /> فيديو الشرح الكامل</span>
+            <b>04:48</b>
+          </div>
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            poster={`${basePath}/screens/social-clip-studio.webp`}
+            aria-label="فيديو شرح Social Clip Studio الكامل"
+          >
+            <source src={`${basePath}/demo/social-clip-studio-demo.mp4`} type="video/mp4" />
+            متصفحك لا يدعم تشغيل الفيديو.
+          </video>
         </div>
       </section>
 

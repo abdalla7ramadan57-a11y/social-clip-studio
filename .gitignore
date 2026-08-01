@@ -48,5 +48,6 @@ next-env.d.ts
 /.devserver*.log
 /.npminstall*.log
 /.transcript*.log
+/.videoencode*.log
 /analyze_recording.py
 /node_modules_corrupt/
