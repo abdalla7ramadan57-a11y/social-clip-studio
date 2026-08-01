@@ -35,6 +35,9 @@ const studios = [
 ];
 
 const platforms = ["YouTube", "Instagram", "Facebook", "Pinterest", "TikTok"];
+const whatsappUrl = `https://wa.me/201091339187?text=${encodeURIComponent(
+  "مرحبًا، أريد شراء Social Clip Studio بسعر 500 جنيه.",
+)}`;
 
 export default function Home() {
   const [active, setActive] = useState(studios[0]);
@@ -49,29 +52,30 @@ export default function Home() {
         <div className="nav-links">
           <a href="#features">المزايا</a>
           <a href="#studios">الاستديوهات</a>
-          <a href="#platforms">المنصات</a>
+          <a href="#learning">التعلّم والكورسات</a>
+          <a href="#price">السعر</a>
         </div>
-        <a className="nav-cta" href="#demo">شاهد العرض <span>↙</span></a>
+        <a className="nav-cta" href={whatsappUrl} target="_blank" rel="noreferrer">واتساب مباشر <span>↙</span></a>
       </nav>
 
       <section className="hero shell" id="top">
         <div className="hero-copy">
-          <div className="kicker"><span className="pulse" /> إضافة واحدة. مسار أسرع.</div>
-          <h1>من الرابط إلى<br /><em>التايملاين.</em></h1>
+          <div className="kicker"><span className="pulse" /> للتعلّم وصناعة الكورسات</div>
+          <h1>من لينك YouTube إلى<br /><em>كورس منظّم.</em></h1>
           <p>
-            Social Clip Studio يجمع تنزيل الفيديو، تنظيم المراجع، مساحة الإنشاء،
-            والـB‑Roll داخل لوحة واحدة جاهزة لـPremiere Pro وAfter Effects.
+            Social Clip Studio تساعدك تجمع دروس YouTube، وتنظّم الفيديوهات والـPlaylists،
+            وتحول المحتوى التعليمي إلى مسار واضح تقدر تتعلم منه أو تبني به كورسك.
           </p>
           <div className="hero-actions">
-            <a className="button primary" href="#demo">اكتشف طريقة العمل <span>←</span></a>
-            <a className="button ghost" href="#studios">استكشف الاستديوهات</a>
+            <a className="button primary" href={whatsappUrl} target="_blank" rel="noreferrer">اشترِ الآن بـ500ج <span>←</span></a>
+            <a className="button ghost" href="#demo">شاهد طريقة العمل</a>
           </div>
           <div className="hero-proof">
             <span><b>05</b> منصات ظاهرة</span>
             <i />
             <span><b>AR / EN</b> واجهة ثنائية</span>
             <i />
-            <span><b>AAC</b> خيارات صوت</span>
+            <span><b>500ج</b> السعر كامل</span>
           </div>
         </div>
 
@@ -190,17 +194,41 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="workflow shell">
+      <section className="workflow shell" id="learning">
         <div className="section-head">
           <div>
-            <span className="section-number">03 / FLOW</span>
-            <h2>ثلاث خطوات.<br />ولا نافذة زيادة.</h2>
+            <span className="section-number">03 / LEARNING</span>
+            <h2>حوّل المشاهدة.<br />إلى رحلة تعلّم.</h2>
           </div>
+          <p>من روابط YouTube المتفرقة إلى دروس وPlaylists مرتبة تخدم المتعلّم وصانع الكورس.</p>
         </div>
-        <div className="steps">
-          <article><b>01</b><span className="step-icon">⌘</span><h3>الصق الرابط</h3><p>من أي منصة مدعومة ظاهرة داخل اللوحة.</p></article>
-          <article><b>02</b><span className="step-icon">≋</span><h3>اضبط الناتج</h3><p>الجزء، الصيغة، الجودة، الصوت ومجلد الحفظ.</p></article>
-          <article><b>03</b><span className="step-icon">↘</span><h3>كمّل المونتاج</h3><p>استورد المادة واشتغل عليها داخل مشروعك.</p></article>
+        <div className="steps learning-steps">
+          <article><b>01</b><span className="step-icon">⌘</span><h3>اجمع لينكات الدروس</h3><p>ضع روابط فيديوهات YouTube التعليمية التي تريد الرجوع إليها أو استخدامها في الكورس.</p></article>
+          <article><b>02</b><span className="step-icon">≋</span><h3>نظّم الدروس والـPlaylists</h3><p>رتّب المحتوى في مسار مفهوم بدل ما تفضل الفيديوهات موزعة بين روابط وقوائم مختلفة.</p></article>
+          <article><b>03</b><span className="step-icon">◎</span><h3>راجع بملاحظات زمنية</h3><p>شاهد الفيديو، وأضف ملاحظتك عند التوقيت الحالي مع العلامات المرجعية داخل Social Workspace.</p></article>
+          <article><b>04</b><span className="step-icon">↘</span><h3>ابنِ كورسك</h3><p>نزّل الأجزاء المطلوبة، حضّر المراجع، وكمّل إنشاء الدرس داخل بيئة المونتاج.</p></article>
+        </div>
+      </section>
+
+      <section className="pricing shell" id="price">
+        <div className="price-card">
+          <div className="price-copy">
+            <span className="section-number">04 / PRICE</span>
+            <h2>كل الأدوات.<br />بسعر واحد واضح.</h2>
+            <p>Social Clip Studio كاملة للتعلّم، تنظيم الدروس والـPlaylists، وصناعة محتوى الكورسات.</p>
+            <ul>
+              <li>تنظيم محتوى YouTube والدروس</li>
+              <li>Social Workspace وFlow Studio</li>
+              <li>B‑Roll Studio داخل بيئة المونتاج</li>
+              <li>واجهة عربية وإنجليزية</li>
+            </ul>
+          </div>
+          <div className="price-box">
+            <span>السعر كامل</span>
+            <div><b>500</b><small>جنيه مصري</small></div>
+            <a className="button whatsapp" href={whatsappUrl} target="_blank" rel="noreferrer">تواصل واشترِ عبر واتساب <span>↗</span></a>
+            <a className="phone-link" href="tel:+201091339187" dir="ltr">010 9133 9187</a>
+          </div>
         </div>
       </section>
 
@@ -208,9 +236,9 @@ export default function Home() {
         <div className="cta-glow" />
         <div className="shell cta-inner">
           <span className="section-number">SOCIAL CLIP STUDIO</span>
-          <h2>كل اللي تحتاجه للمحتوى.<br /><em>داخل مساحة واحدة.</em></h2>
-          <p>تنزيل، معاينة، ملاحظات، إنشاء وB‑Roll — من غير ما تسيب بيئة المونتاج.</p>
-          <a className="button primary" href="#top">ارجع وشاهد الواجهة <span>↑</span></a>
+          <h2>رتّب تعلّمك.<br /><em>وابنِ كورسك.</em></h2>
+          <p>Social Clip Studio كاملة بـ500 جنيه — تواصل معنا مباشرة وابدأ.</p>
+          <a className="button whatsapp" href={whatsappUrl} target="_blank" rel="noreferrer">تواصل على واتساب <span>↗</span></a>
         </div>
       </section>
 
